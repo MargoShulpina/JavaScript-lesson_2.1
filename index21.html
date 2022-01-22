@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Операторы ? и его использование</title>
+</head>
+<body>
+  <script>
+    let a = prompt('Введите значение переменной "a": ', '');
+    a = a.replace(/\s+/g, '');
+
+      while (a <= 0 || isNaN(+a)) {
+        alert('Неверный формат введенного значения. Необходимо ввести число больше 0.\nДавайте попробуем ещё раз!')
+        a = prompt('Введите значение переменной "a":', '');
+        a = a.replace(/\s+/g, '');
+      }
+
+    let b = prompt('Введите значение переменной "b": ', '');
+        b = b.replace(/\s+/g, '');
+
+          while (b <= 0 || isNaN(+b)) {
+            alert('Неверный формат введенного значения. Необходимо ввести число больше 0.\nДавайте попробуем ещё раз!')
+            b = prompt('Введите значение переменной "b":', '');
+            b = b.replace(/\s+/g, '');
+          }
+
+    let c = prompt('Введите значение переменной "с": ', '');
+        c = c.replace(/\s+/g, '');
+
+          while (c <= 0 || isNaN(+c)) {
+            alert('Неверный формат введенного значения. Необходимо ввести число больше 0.\nДавайте попробуем ещё раз!')
+            c = prompt('Введите значение переменной "c":', '');
+            c = c.replace(/\s+/g, '');
+          }
+
+    let res = ((a*a+b*b) == c*c) ? 'Ура: угадали длины сторон треугольника' : 'Надо учить теорему';
+    alert (res);
+
+  </script>
+</body>
+</html>

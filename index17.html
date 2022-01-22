@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Операторы ветвлений и условий в JavaScript</title>
+</head>
+<body>
+  <script>
+    let year = prompt('В каком году у Вас в группе начал вести занятия Виталий Валентинович?', '');
+
+    year = year.replace(/\s+/g, '');
+
+      while (year <= 0 || year.length != 4 || !Number.isInteger(+year)) {
+        alert('Неверный формат введенного значения.\nДавайте попробуем еще раз!')
+        year = prompt('В каком году у Вас в группе начал вести занятия Виталий Валентинович?\nФормат - ГГГГ', '');
+        year = year.replace(/\s+/g, '');
+      }
+    if (year < 2021) {
+      alert('Да не может быть! Это слишком рано...');
+      }
+    else if (year > 2021) {
+      alert('Да Вы что! Как-то поздновато...');
+      }
+    else if (year = 2021) {
+      alert('Вы знаток! Да, точно в этом году!');
+      }
+
+  </script>
+</body>
+</html>
