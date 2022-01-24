@@ -11,10 +11,11 @@
     let a = prompt('Введите значение переменной "a": ', '');
     let b = prompt('Введите значение переменной "b": ', '');
     let res;
-    if (isNaN(a) && isNaN(b)) 
+    if (a != a.replace(/\s+/g, '') || b != b.replace(/\s+/g, ''))
+    res = 'Необходимо ввести значения без пробелов';
+    else if (isNaN(a) && isNaN(b)) 
       res = ((a + a) == b) ? 'Значения равны' : 'Значения не равны';
-    
-    else 
+      else 
       res = ((+a + +a) == b) ? 'Значения равны' : 'Значения не равны';
     alert (res);
   </script>
